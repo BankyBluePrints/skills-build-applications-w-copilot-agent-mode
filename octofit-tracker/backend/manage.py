@@ -7,6 +7,10 @@ import sys
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'octofit_tracker.settings')
+    argv = sys.argv[:]
+    # Default to runserver when no subcommand is provided to prevent SystemExit during bare execution
+    if len(argv) == 1:
+        argv.extend(['runserver', '0.0.0.0:8000'])
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -15,7 +19,7 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
-    execute_from_command_line(sys.argv)
+    execute_from_command_line(argv)
 
 
 if __name__ == '__main__':
