@@ -5,6 +5,7 @@ import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
+import logo from './assets/octofitapp-small.png';
 import './App.css';
 
 const navItems = [
@@ -21,7 +22,10 @@ function App() {
       <div className="app-wrapper">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-dark app-navbar rounded-4 px-3 mb-4">
-            <span className="navbar-brand fw-semibold">Octofit Tracker</span>
+            <span className="navbar-brand fw-semibold d-flex align-items-center gap-2 brand-mark">
+              <img src={logo} alt="Octofit logo" className="brand-logo" />
+              Octofit Tracker
+            </span>
             <button
               className="navbar-toggler"
               type="button"

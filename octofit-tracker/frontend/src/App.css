@@ -15,6 +15,15 @@ body {
   min-height: 100vh;
 }
 
+a {
+  color: var(--octo-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9bf0ff;
+}
+
 .app-wrapper {
   padding: 1.5rem 0 2.5rem;
 }
@@ -23,6 +32,21 @@ body {
   background: rgba(7, 12, 24, 0.7);
   backdrop-filter: blur(12px);
   border: 1px solid var(--octo-border);
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px;
+}
+
+.brand-mark {
+  color: #ffffff;
+  letter-spacing: 0.02em;
 }
 
 .app-navbar .navbar-brand {
@@ -42,6 +66,15 @@ body {
 .app-navbar .nav-link:hover {
   color: #ffffff;
   background-color: rgba(77, 208, 225, 0.14);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f5f8ff;
 }
 
 .page-header {
@@ -106,6 +139,23 @@ body {
 
 .btn-glow:hover::after {
   opacity: 1;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0d6efd, #4dd0e1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #041024;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0b5ed7, #3ac7d6);
+  color: #030b19;
+}
+
+.btn-secondary {
+  background: rgba(142, 163, 183, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d8e5f5;
 }
 
 .badge-soft {
